@@ -3,9 +3,9 @@ import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation, Pagination, EffectFade } from 'swiper';
 import 'swiper/css/bundle';
-import banner4 from '../../../public/assets/img/slider-img/banner-01.png';
+// import banner4 from '../../../public/assets/img/slider-img/banner-01.png';
 import banner5 from '../../../public/assets/img/slider-img/banner-02.png';
-import banner6 from '../../../public/assets/img/slider-img/banner-03.png';
+// import banner6 from '../../../public/assets/img/slider-img/banner-03.png';
 import bannerBg from '../../../public/assets/img/banner/computer_store.jpg';
 import Link from 'next/link';
 const HeroBanner2 = () => {
