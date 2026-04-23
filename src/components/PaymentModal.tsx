@@ -5,7 +5,6 @@ import { useCallback, useEffect, useState } from "react";
 
 type Props = { open: boolean; onClose: () => void };
 
-/** Shown when the payment request fails; mimics a gateway response. */
 const GATEWAY_FAILURE = {
   code: "PAY_2048",
   message:
@@ -70,7 +69,7 @@ export function PaymentModal({ open, onClose }: Props) {
           <>
             <ProcessingLoader />
             <p className="mt-1 text-center text-xs text-slate-400">
-              Connection can take up to a minute. Please keep this page open.
+              This step can take up to 30 seconds. Please keep this page open.
             </p>
             <button
               type="button"

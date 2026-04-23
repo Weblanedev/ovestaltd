@@ -5,8 +5,8 @@ export default function AboutPage() {
   return (
     <main>
       <PageHeader
-        title="About Ovesta"
-        description="A focused storefront for tablets and accessories."
+        title="About Ovesta Store"
+        description="A tech store built around products you can trust and checkout you can count on."
         crumbs={[
           { href: "/", label: "Home" },
           { href: "/about", label: "About" },
@@ -14,18 +14,27 @@ export default function AboutPage() {
       />
       <div className="mx-auto max-w-3xl space-y-6 px-4 py-10 text-slate-700 sm:px-6">
         <p>
-          Ovesta is built as a clean Next.js experience: search and categories,
-          cart in the browser, sign-in for checkout, and clear policies.
+          We bring together quality electronics, smart accessories, and
+          the support you need to choose with confidence.
         </p>
         <p>
-          Product data on this site is <strong>demo data</strong> from DummyJSON.
-          Prices and stock are not real. Payment is simulated.
-        </p>
-        <p>
+          Browse the shop, build your cart, and check out when you are ready.
+          For questions, use{" "}
           <Link className="text-cyan-800 underline" href="/contact">
             Contact
           </Link>{" "}
-          the team about selling through Ovesta or for support.
+          or email{" "}
+          <a className="text-cyan-800 underline" href="mailto:support@ovestastore.com">
+            support@ovestastore.com
+          </a>
+          .
+        </p>
+        <p>
+          Vendors: learn about{" "}
+          <Link className="text-cyan-800 underline" href="/sell">
+            offering your products through Ovesta
+          </Link>
+          .
         </p>
       </div>
     </main>

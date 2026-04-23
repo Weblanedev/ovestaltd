@@ -9,7 +9,7 @@ import { Footer } from "@/components/Footer";
 import { HotToaster } from "@/components/HotToaster";
 import { StoreHelpPanel } from "@/components/StoreHelpPanel";
 import { ChatUsButton } from "@/components/ChatUsButton";
-import { getSiteName, getSiteUrl } from "@/lib/site";
+import { getSiteUrl } from "@/lib/site";
 import "./globals.css";
 
 const sora = Sora({
@@ -30,14 +30,35 @@ const jetbrains = JetBrains_Mono({
   display: "swap",
 });
 
+const siteUrl = getSiteUrl();
+const shareTitle = "Ovesta Store";
+const shareDescription =
+  "Quality tech and electronics at ovestastore.com. Secure checkout, fast support, and gear you can trust.";
+
 export const metadata: Metadata = {
-  metadataBase: new URL(getSiteUrl()),
+  metadataBase: new URL(siteUrl),
   title: {
-    default: `${getSiteName()} · Tablets and accessories`,
-    template: `%s · ${getSiteName()}`,
+    default: `${shareTitle} · ovestastore.com`,
+    template: `%s · ${shareTitle}`,
   },
-  description:
-    "Ovesta. Shop tablets and accessories with a clear checkout when you are signed in.",
+  description: shareDescription,
+  applicationName: shareTitle,
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: siteUrl,
+    siteName: shareTitle,
+    title: shareTitle,
+    description: shareDescription,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: shareTitle,
+    description: shareDescription,
+  },
 };
 
 export default function RootLayout({

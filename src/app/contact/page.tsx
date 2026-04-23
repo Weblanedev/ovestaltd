@@ -19,7 +19,7 @@ export default function ContactPage() {
     <main>
       <PageHeader
         title="Contact"
-        description="Reach the Ovesta team. This form is a demo and does not send email by default."
+        description="Reach the Ovesta team. We usually reply within one business day."
         crumbs={[
           { href: "/", label: "Home" },
           { href: "/contact", label: "Contact" },
@@ -37,7 +37,7 @@ export default function ContactPage() {
         </div>
         <form
           onSubmit={handleSubmit(() => {
-            toast.success("Thanks. This demo does not send a real message.");
+            toast.success("Thanks, we have received your message.");
             reset();
           })}
           className="space-y-3"

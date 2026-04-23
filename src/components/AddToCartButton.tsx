@@ -19,7 +19,7 @@ export function AddToCartButton({ product, label = "Add to cart" }: Props) {
       disabled={!product.inStock || adding}
       onClick={() => {
         if (!product.inStock) {
-          toast.error("This item is out of stock in the demo.");
+          toast.error("This item is currently out of stock.");
           return;
         }
         setAdding(true);

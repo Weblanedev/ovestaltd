@@ -38,7 +38,7 @@ export async function POST(request: Request) {
   const catalog = await buildCatalogContextForChat();
   const system: ChatMessage = {
     role: "system",
-    content: `You are Ovesta store help: concise, professional answers about our tablets and accessories. Use only the catalog context below. If something is not listed, direct the shopper to Contact for more.
+    content: `You are Ovesta Store help: concise, professional answers about our tech products. Use only the catalog context below. If something is not listed, direct the customer to Contact for more.
 
 Catalog context:
 ${catalog}`,

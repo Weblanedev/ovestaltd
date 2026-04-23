@@ -15,27 +15,27 @@ export function HomeHero({ imageSrc, imageAlt }: Props) {
       <div className="mx-auto grid min-h-[100dvh] w-full max-w-7xl grid-cols-1 items-center gap-8 px-4 pb-12 pt-24 sm:px-6 sm:pt-28 lg:grid-cols-2 lg:gap-12 lg:pt-32">
         <div className="order-2 max-w-2xl space-y-6 md:order-1 lg:space-y-8">
           <p className="text-sm font-medium uppercase tracking-[0.2em] text-cyan-300/90">
-            Ovesta
+            Ovesta Store
           </p>
           <h1 className="font-display text-4xl font-bold leading-[1.1] text-white sm:text-5xl lg:text-6xl xl:text-7xl">
-            Tablets and accessories, curated for every day
+            Tech and electronics, curated for real life
           </h1>
           <p className="max-w-xl text-lg leading-relaxed text-slate-300 sm:text-xl">
-            Compare devices and gear from our catalog. Sign in to checkout and
-            get help from support when you need it.
+            Discover devices and gear for work, home, and everything in between.
+            Sign in to check out and get help when you need it.
           </p>
           <div className="flex flex-wrap gap-3 pt-2">
             <Link
               href="/products?category=tablets"
               className="inline-flex min-h-12 min-w-[10rem] items-center justify-center rounded-md bg-amber-500 px-6 text-sm font-semibold text-slate-900 shadow-lg hover:bg-amber-400"
             >
-              Shop tablets
+              Shop devices
             </Link>
             <Link
               href="/products?category=accessories"
               className="inline-flex min-h-12 items-center justify-center rounded-md border border-white/30 bg-white/5 px-6 text-sm font-semibold text-white backdrop-blur-sm hover:bg-white/15"
             >
-              Browse accessories
+              Shop add-ons
             </Link>
           </div>
         </div>

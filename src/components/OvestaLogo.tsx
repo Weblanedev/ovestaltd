@@ -1,5 +1,8 @@
 import Link from "next/link";
 
+const wordmark =
+  process.env.NEXT_PUBLIC_SITE_NAME ?? "Ovesta Store";
+
 type Props = {
   className?: string;
   wordmarkClassName?: string;
@@ -23,9 +26,11 @@ export function OvestaLogo({ className, wordmarkClassName, variant = "default" }
         O
       </span>
       <span
-        className={wordmarkClassName ?? (isDark ? "text-white" : "text-slate-900")}
+        className={`leading-tight ${
+          wordmarkClassName ?? (isDark ? "text-white" : "text-slate-900")
+        } text-[0.95rem] sm:text-xl`}
       >
-        Ovesta
+        {wordmark}
       </span>
     </Link>
   );

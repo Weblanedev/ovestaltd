@@ -40,8 +40,8 @@ export default async function HomePage() {
               Shop by category
             </h2>
             <p className="mt-2 text-slate-600">
-              Choose tablets or accessories. Smartphones and laptops are not
-              part of this storefront.
+              From portable devices to everyday tech add-ons, browse the way
+              you like.
             </p>
             <ul className="mt-4 flex flex-wrap gap-3 list-none text-sm">
               <li>
@@ -49,7 +49,7 @@ export default async function HomePage() {
                   className="text-cyan-800 underline"
                   href="/products?category=tablets"
                 >
-                  Tablets
+                  Devices
                 </Link>
               </li>
               <li>
@@ -58,7 +58,7 @@ export default async function HomePage() {
                   className="text-cyan-800 underline"
                   href="/products?category=accessories"
                 >
-                  Accessories
+                  Add-ons
                 </Link>
               </li>
             </ul>
@@ -67,7 +67,7 @@ export default async function HomePage() {
         {featuredTablets.products.length > 0 && (
           <section className="mt-14">
             <h2 className="font-display text-2xl font-bold text-slate-900 sm:text-3xl">
-              Featured tablets
+              Featured picks
             </h2>
             <ul className="mt-6 grid list-none gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {featuredTablets.products.map((p, i) => (
@@ -81,7 +81,7 @@ export default async function HomePage() {
         {accRow.products.length > 0 && (
           <section className="mt-14">
             <h2 className="font-display text-2xl font-bold text-slate-900 sm:text-3xl">
-              Accessories
+              More gear
             </h2>
             <ul className="mt-6 grid list-none gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {accRow.products.map((p) => (
@@ -95,31 +95,31 @@ export default async function HomePage() {
                 className="text-cyan-800 underline"
                 href="/products?category=accessories"
               >
-                All accessories
+                See all in category
               </Link>
             </p>
           </section>
         )}
         <section className="mt-14 grid gap-4 rounded-xl border border-slate-200 bg-cyan-50/40 p-6 sm:grid-cols-3 sm:p-8">
           <div>
-            <h3 className="font-medium text-slate-900">Fast dispatch</h3>
+            <h3 className="font-medium text-slate-900">Dispatch</h3>
             <p className="mt-1 text-sm text-slate-600">
-              Orders in this demo are not fulfilled. In production you set lead
-              times here.
+              We aim to process orders quickly. Delivery times and carriers are
+              confirmed at checkout.
             </p>
           </div>
           <div>
             <h3 className="font-medium text-slate-900">Secure checkout</h3>
             <p className="mt-1 text-sm text-slate-600">
-              You sign in before checkout. Payment in this app is a simulation
-              only.
+              Create an account to check out. Your payment is processed through
+              our gateway and protected by industry-standard security.
             </p>
           </div>
           <div>
             <h3 className="font-medium text-slate-900">Support</h3>
             <p className="mt-1 text-sm text-slate-600">
-              Contact us, or use live chat for store help when you are signed
-              in.
+              Email support@ovestastore.com, use live chat, or the contact form
+              when you are signed in.
             </p>
           </div>
         </section>

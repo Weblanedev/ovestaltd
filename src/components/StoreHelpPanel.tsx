@@ -88,8 +88,8 @@ export function StoreHelpPanel() {
         <div className="flex-1 space-y-3 overflow-y-auto px-3 py-3 text-sm">
           {messages.length === 0 && (
             <p className="text-slate-500">
-              Ask about tablets, accessories, or your order. Replies are based
-              on our public catalog. For anything else, use Contact.
+              Ask about products, orders, or our catalog. For account-specific
+              issues, use Contact.
             </p>
           )}
           {messages.map((m, i) => (

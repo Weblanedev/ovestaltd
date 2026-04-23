@@ -7,6 +7,6 @@ export const contactInfo = {
   siteUrl: getSiteUrl(),
   address: "120 Commerce Way, Suite 400, San Francisco, CA 94102, USA",
   phone: "+1 (415) 555-0198",
-  paymentsEmail: "payments@ovesta.com",
-  supportEmail: "support@ovesta.com",
+  paymentsEmail: "payments@ovestastore.com",
+  supportEmail: "support@ovestastore.com",
 } as const;

@@ -14,9 +14,9 @@ export default function SellPage() {
       />
       <div className="mx-auto max-w-2xl px-4 py-8 sm:px-6">
         <p className="mb-6 text-slate-600">
-          Ovesta connects people browsing tablets and accessories with trusted
+          Ovesta Store connects tech shoppers with trusted brands and
           suppliers. Share your details and we will review fit for our
-          storefront.
+          catalog.
         </p>
         <SellToCustomersForm />
       </div>

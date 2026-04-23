@@ -6,7 +6,7 @@ export default function CheckoutPage() {
     <main>
       <PageHeader
         title="Checkout"
-        description="Save shipping to your profile, then try the demo payment."
+        description="Save your shipping details to your profile, then complete payment."
         crumbs={[
           { href: "/", label: "Home" },
           { href: "/cart", label: "Cart" },

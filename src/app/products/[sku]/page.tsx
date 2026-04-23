@@ -75,7 +75,7 @@ export default async function ProductPage({ params }: Props) {
               <Link className="text-cyan-800 underline" href="/privacy">
                 privacy
               </Link>{" "}
-              apply to every order in this demo.
+              apply to every order.
             </p>
           </div>
         </div>

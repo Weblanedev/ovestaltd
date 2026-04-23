@@ -14,8 +14,8 @@ export function Footer() {
           <div>
             <OvestaLogo className="inline-flex" />
             <p className="mt-3 text-sm text-slate-600">
-              Tablets and accessories. Fast, friendly checkout when you are
-              signed in.
+              A tech store for quality electronics and gear. Sign in for a
+              fast, secure checkout.
             </p>
           </div>
           <div>
@@ -33,7 +33,7 @@ export function Footer() {
                   className="text-cyan-800 hover:underline"
                   href="/products?category=tablets"
                 >
-                  Tablets
+                  Devices
                 </Link>
               </li>
               <li>
@@ -41,7 +41,7 @@ export function Footer() {
                   className="text-cyan-800 hover:underline"
                   href="/products?category=accessories"
                 >
-                  Accessories
+                  Add-ons
                 </Link>
               </li>
             </ul>

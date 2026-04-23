@@ -9,7 +9,7 @@ function line(p: StoreProduct) {
 }
 
 export async function buildCatalogContextForChat(): Promise<string> {
-  const intro = "Ovesta catalog: tablets and accessories (public listings).";
+  const intro = "Ovesta Store catalog: tech products and electronics (public listings).";
   const blocks: string[] = [intro];
   for (const cat of PRODUCT_CATEGORIES) {
     const { products } = await fetchDummyJsonProducts({

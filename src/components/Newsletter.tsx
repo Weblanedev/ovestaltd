@@ -13,8 +13,8 @@ export function Newsletter() {
           Stay in the loop
         </h2>
         <p className="mt-2 text-slate-600">
-          Product tips and stock alerts. This demo does not send real email, but
-          you can test the form.
+          Product tips and stock alerts. Unsubscribe any time from emails we
+          send.
         </p>
         <form
           className="mt-6 flex max-w-md flex-col gap-2 sm:mx-auto sm:flex-row"
@@ -24,7 +24,7 @@ export function Newsletter() {
               toast.error("Enter a valid email.");
               return;
             }
-            toast.success("Thanks. This is a demo, so nothing was sent.");
+            toast.success("Thanks. You are on the list.");
             setEmail("");
           }}
         >

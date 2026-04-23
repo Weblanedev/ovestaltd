@@ -104,7 +104,7 @@ export function ProductsClient() {
     <main>
       <PageHeader
         title="Shop"
-        description="Tablets and accessories from the demo catalog."
+        description="Tech, devices, and electronics from Ovesta Store."
         crumbs={[
           { href: "/", label: "Home" },
           { href: "/products", label: "Shop" },

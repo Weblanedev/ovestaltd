@@ -118,7 +118,9 @@ export function CartView() {
               Log in to checkout
             </button>
           )}
-          <p className="mt-2 text-xs text-slate-500">Checkout requires an account. No guest checkout in this demo.</p>
+          <p className="mt-2 text-xs text-slate-500">
+            Checkout requires an account. Guest checkout is not available.
+          </p>
         </div>
       </div>
     </div>
