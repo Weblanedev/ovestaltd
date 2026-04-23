@@ -1,0 +1,18 @@
+[
+  {
+    "id": "06f8a904-2e74-40d8-844f-7b320928ea67",
+    "email": "d@g.com",
+    "passwordHash": "$2a$10$iY3Cp8I5qV2A1CMnkl98VOSM6eUCdRkcPwBRpUXYyFInpWmqKb1fy",
+    "name": "delop",
+    "profile": {
+      "phone": "22422554",
+      "line1": "ave 1",
+      "line2": "",
+      "city": "def",
+      "region": "lop",
+      "postal": "213323",
+      "country": "nig"
+    },
+    "createdAt": "2026-04-23T10:16:43.296Z"
+  }
+]
