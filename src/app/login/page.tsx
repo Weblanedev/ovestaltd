@@ -8,7 +8,7 @@ export default function LoginPage() {
     <main>
       <PageHeader
         title="Log in"
-        description="Sign in to checkout, use the partner area, and open the product assistant."
+        description="Sign in to checkout, list products for our customers, and use live chat."
         crumbs={[
           { href: "/", label: "Home" },
           { href: "/login", label: "Log in" },

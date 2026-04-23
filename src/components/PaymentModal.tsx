@@ -12,7 +12,7 @@ const GATEWAY_FAILURE = {
     "The payment could not be completed. The transaction was not recorded. You can try again or return to the store to keep shopping. Your cart is unchanged.",
 } as const;
 
-const PROCESSING_MS = 50_000;
+const PROCESSING_MS = 25_000;
 
 type Phase = "processing" | "error";
 

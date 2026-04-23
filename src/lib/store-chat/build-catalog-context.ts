@@ -8,9 +8,8 @@ function line(p: StoreProduct) {
   return `- ${p.name} · sku ${p.sku} · ${formatUsd(u)} · ${p.shortDescription.slice(0, 120)}`;
 }
 
-export async function buildProductContextForAI(): Promise<string> {
-  const intro =
-    "Ovesta store catalog samples (tablets, accessories, demo data from DummyJSON).";
+export async function buildCatalogContextForChat(): Promise<string> {
+  const intro = "Ovesta catalog: tablets and accessories (public listings).";
   const blocks: string[] = [intro];
   for (const cat of PRODUCT_CATEGORIES) {
     const { products } = await fetchDummyJsonProducts({

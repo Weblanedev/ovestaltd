@@ -7,7 +7,7 @@ import { ChatWidgetProvider } from "@/context/ChatWidgetContext";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { HotToaster } from "@/components/HotToaster";
-import { AIChatPanel } from "@/components/AIChatPanel";
+import { StoreHelpPanel } from "@/components/StoreHelpPanel";
 import { ChatUsButton } from "@/components/ChatUsButton";
 import { getSiteName, getSiteUrl } from "@/lib/site";
 import "./globals.css";
@@ -61,7 +61,7 @@ export default function RootLayout({
               <Suspense fallback={null}>
                 <ChatUsButton />
               </Suspense>
-              <AIChatPanel />
+              <StoreHelpPanel />
             </ChatWidgetProvider>
           </CartProvider>
         </AuthProvider>

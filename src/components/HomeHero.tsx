@@ -8,50 +8,56 @@ type Props = {
 
 export function HomeHero({ imageSrc, imageAlt }: Props) {
   return (
-    <section className="overflow-hidden rounded-2xl border border-slate-200/80 bg-gradient-to-br from-slate-900 via-cyan-950 to-slate-900 shadow-sm">
-      <div className="grid items-center gap-0 md:grid-cols-2">
-        <div className="order-2 space-y-5 px-6 py-10 sm:px-10 sm:py-12 md:order-1">
-          <p className="text-sm font-medium uppercase tracking-wide text-cyan-300/90">
+    <section
+      className="relative w-full min-h-[100dvh] overflow-hidden bg-gradient-to-b from-slate-950 via-cyan-950 to-slate-900"
+      aria-label="Welcome"
+    >
+      <div className="mx-auto grid min-h-[100dvh] w-full max-w-7xl grid-cols-1 items-center gap-8 px-4 pb-12 pt-24 sm:px-6 sm:pt-28 lg:grid-cols-2 lg:gap-12 lg:pt-32">
+        <div className="order-2 max-w-2xl space-y-6 md:order-1 lg:space-y-8">
+          <p className="text-sm font-medium uppercase tracking-[0.2em] text-cyan-300/90">
             Ovesta
           </p>
-          <h1 className="font-display text-3xl font-bold leading-tight text-white sm:text-4xl lg:text-5xl">
+          <h1 className="font-display text-4xl font-bold leading-[1.1] text-white sm:text-5xl lg:text-6xl xl:text-7xl">
             Tablets and accessories, curated for every day
           </h1>
-          <p className="max-w-lg text-lg text-slate-300">
-            Compare devices and gear from our demo catalog. Sign in to checkout
-            and get help from support when you need it.
+          <p className="max-w-xl text-lg leading-relaxed text-slate-300 sm:text-xl">
+            Compare devices and gear from our catalog. Sign in to checkout and
+            get help from support when you need it.
           </p>
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-wrap gap-3 pt-2">
             <Link
               href="/products?category=tablets"
-              className="inline-flex min-h-12 min-w-[10rem] items-center justify-center rounded-md bg-amber-500 px-5 text-sm font-semibold text-slate-900 shadow-sm hover:bg-amber-400"
+              className="inline-flex min-h-12 min-w-[10rem] items-center justify-center rounded-md bg-amber-500 px-6 text-sm font-semibold text-slate-900 shadow-lg hover:bg-amber-400"
             >
               Shop tablets
             </Link>
             <Link
               href="/products?category=accessories"
-              className="inline-flex min-h-12 items-center justify-center rounded-md border border-slate-500/60 bg-transparent px-5 text-sm font-semibold text-white hover:bg-white/10"
+              className="inline-flex min-h-12 items-center justify-center rounded-md border border-white/30 bg-white/5 px-6 text-sm font-semibold text-white backdrop-blur-sm hover:bg-white/15"
             >
               Browse accessories
             </Link>
           </div>
         </div>
-        <div className="relative order-1 aspect-[4/3] w-full min-h-[220px] md:order-2 md:aspect-auto md:min-h-[320px]">
+        <div className="relative order-1 min-h-[280px] w-full sm:min-h-[360px] md:order-2 md:min-h-[min(50dvh,480px)]">
           {imageSrc ? (
-            <Image
-              src={imageSrc}
-              alt={imageAlt ?? ""}
-              fill
-              className="object-contain p-6 sm:p-8"
-              sizes="(min-width: 768px) 50vw, 100vw"
-              priority
-            />
+            <div className="absolute inset-0 flex items-center justify-center">
+              <Image
+                src={imageSrc}
+                alt={imageAlt ?? ""}
+                width={800}
+                height={800}
+                className="h-auto w-full max-w-lg object-contain drop-shadow-2xl"
+                sizes="(min-width: 1024px) 45vw, 90vw"
+                priority
+              />
+            </div>
           ) : (
             <div
-              className="flex h-full min-h-[220px] items-center justify-center p-8 md:min-h-[320px]"
+              className="flex h-full min-h-[280px] items-center justify-center md:min-h-[400px]"
               aria-hidden
             >
-              <div className="h-32 w-32 rounded-2xl bg-cyan-500/20 ring-1 ring-cyan-400/30" />
+              <div className="h-40 w-40 rounded-3xl bg-cyan-500/15 ring-2 ring-cyan-400/25 sm:h-48 sm:w-48" />
             </div>
           )}
         </div>

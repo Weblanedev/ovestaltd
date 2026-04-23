@@ -32,12 +32,9 @@ export default async function HomePage() {
 
   return (
     <main>
-      <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-10">
-        <HomeHero
-          imageSrc={heroImage}
-          imageAlt={heroAlt}
-        />
-        <section className="mt-12">
+      <HomeHero imageSrc={heroImage} imageAlt={heroAlt} />
+      <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
+        <section>
           <AnimatedSection>
             <h2 className="font-display text-2xl font-bold text-slate-900 sm:text-3xl">
               Shop by category
@@ -121,7 +118,8 @@ export default async function HomePage() {
           <div>
             <h3 className="font-medium text-slate-900">Support</h3>
             <p className="mt-1 text-sm text-slate-600">
-              Contact us, or open the product assistant when you are signed in.
+              Contact us, or use live chat for store help when you are signed
+              in.
             </p>
           </div>
         </section>

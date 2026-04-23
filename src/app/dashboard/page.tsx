@@ -55,7 +55,7 @@ export default function DashboardPage() {
             <Link className="text-cyan-800 underline" href="/contact">
               Contact
             </Link>
-            , or open the product assistant when you are signed in.
+            , or open store help from live chat when you are signed in.
           </p>
           <div className="mt-4 flex flex-wrap gap-2">
             <button
@@ -63,7 +63,7 @@ export default function DashboardPage() {
               className="rounded-md bg-cyan-600 px-4 py-2.5 text-sm font-semibold text-white hover:bg-cyan-700"
               onClick={() => setOpen(true)}
             >
-              Open product assistant
+              Open store help
             </button>
             <Link
               href="/contact"

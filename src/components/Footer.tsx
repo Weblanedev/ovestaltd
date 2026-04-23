@@ -68,9 +68,9 @@ export function Footer() {
                 <li>
                   <Link
                     className="text-cyan-800 hover:underline"
-                    href="/partner"
+                    href="/sell"
                   >
-                    Partner
+                    Sell to customers
                   </Link>
                 </li>
               )}
@@ -106,7 +106,8 @@ export function Footer() {
           </div>
         </div>
         <p className="mt-10 text-center text-xs text-slate-500">
-          © {new Date().getFullYear()} {contactInfo.siteName}. Demo storefront.
+          © {new Date().getFullYear()} {contactInfo.siteName}. All rights
+          reserved.
         </p>
       </div>
     </footer>

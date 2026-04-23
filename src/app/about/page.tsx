@@ -25,7 +25,7 @@ export default function AboutPage() {
           <Link className="text-cyan-800 underline" href="/contact">
             Contact
           </Link>{" "}
-          the team for partnerships or support questions.
+          the team about selling through Ovesta or for support.
         </p>
       </div>
     </main>

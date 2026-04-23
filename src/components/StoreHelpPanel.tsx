@@ -6,9 +6,9 @@ import ReactMarkdown from "react-markdown";
 import { useChatWidget } from "@/context/ChatWidgetContext";
 import { useAuth } from "@/context/AuthContext";
 
-type Msg = { role: "user" | "assistant"; text: string };
+type Msg = { role: "user" | "reply"; text: string };
 
-export function AIChatPanel() {
+export function StoreHelpPanel() {
   const { open, setOpen } = useChatWidget();
   const { user } = useAuth();
   const [messages, setMessages] = useState<Msg[]>([]);
@@ -21,16 +21,16 @@ export function AIChatPanel() {
     if (!text || sending) return;
     setInput("");
     setSending(true);
-    const next = [...messages, { role: "user" as const, text }];
+    const next: Msg[] = [...messages, { role: "user", text }];
     setMessages(next);
     try {
-      const r = await fetch("/api/ai/chat", {
+      const r = await fetch("/api/chat", {
         method: "POST",
         credentials: "include",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           messages: next.map((m) => ({
-            role: m.role,
+            role: m.role === "reply" ? "assistant" : "user",
             content: m.text,
           })),
         }),
@@ -40,21 +40,18 @@ export function AIChatPanel() {
         setMessages((m) => [
           ...m,
           {
-            role: "assistant",
+            role: "reply",
             text: d.error ?? "Something went wrong. Try again or use Contact.",
           },
         ]);
         return;
       }
-      setMessages((m) => [
-        ...m,
-        { role: "assistant", text: d.text ?? "" },
-      ]);
+      setMessages((m) => [...m, { role: "reply", text: d.text ?? "" }]);
     } catch {
       setMessages((m) => [
         ...m,
         {
-          role: "assistant",
+          role: "reply",
           text: "Network error. Check your connection or use Contact.",
         },
       ]);
@@ -70,9 +67,7 @@ export function AIChatPanel() {
     >
       <div className="flex max-h-[80vh] flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-2xl">
         <div className="flex items-center justify-between border-b border-slate-200 px-4 py-2">
-          <h2 className="text-sm font-semibold text-slate-900">
-            Product assistant
-          </h2>
+          <h2 className="text-sm font-semibold text-slate-900">Store help</h2>
           <div className="flex items-center gap-2">
             <Link
               href="/contact"
@@ -93,8 +88,8 @@ export function AIChatPanel() {
         <div className="flex-1 space-y-3 overflow-y-auto px-3 py-3 text-sm">
           {messages.length === 0 && (
             <p className="text-slate-500">
-              Ask about tablets or accessories. Answers use demo
-              catalog data and may be imperfect.
+              Ask about tablets, accessories, or your order. Replies are based
+              on our public catalog. For anything else, use Contact.
             </p>
           )}
           {messages.map((m, i) => (
@@ -106,7 +101,7 @@ export function AIChatPanel() {
                   : "mr-6 rounded-md bg-slate-50 p-2 text-slate-800 [&_a]:text-cyan-800"
               }
             >
-              {m.role === "assistant" ? (
+              {m.role === "reply" ? (
                 <div className="prose prose-sm prose-slate max-w-none">
                   <ReactMarkdown>{m.text}</ReactMarkdown>
                 </div>

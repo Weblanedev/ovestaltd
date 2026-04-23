@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import OpenAI from "openai";
-import { buildProductContextForAI } from "@/lib/ai/build-product-context";
+import { buildCatalogContextForChat } from "@/lib/store-chat/build-catalog-context";
 import { getServerUser } from "@/lib/server-auth";
 
 const defaultModel = "gpt-4o-mini";
@@ -10,7 +10,7 @@ type ChatMessage = { role: "user" | "assistant" | "system"; content: string };
 export async function POST(request: Request) {
   if (!process.env.OPENAI_API_KEY) {
     return NextResponse.json(
-      { error: "AI assistant is not configured on this server." },
+      { error: "Store help is not available on this server right now." },
       { status: 503 }
     );
   }
@@ -35,10 +35,10 @@ export async function POST(request: Request) {
     );
   }
 
-  const catalog = await buildProductContextForAI();
+  const catalog = await buildCatalogContextForChat();
   const system: ChatMessage = {
     role: "system",
-    content: `You are the Ovesta product assistant for a store focused on tablets and accessories. Be concise and helpful. Use only the catalog context as reference for what we carry. If asked about something outside the catalog, say you can help compare our listed items or they can use Contact for more.
+    content: `You are Ovesta store help: concise, professional answers about our tablets and accessories. Use only the catalog context below. If something is not listed, direct the shopper to Contact for more.
 
 Catalog context:
 ${catalog}`,
