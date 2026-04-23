@@ -1,5 +1,9 @@
 [build]
   command = "npm run build"
 
+# Next.js 16 requires Node >= 20.9.0 (Netlify default image can be Node 18).
+[build.environment]
+  NODE_VERSION = "20"
+
 [[plugins]]
   package = "@netlify/plugin-nextjs"
