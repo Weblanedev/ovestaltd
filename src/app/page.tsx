@@ -3,6 +3,7 @@ import { AnimatedSection } from "@/components/AnimatedSection";
 import { HomeHero } from "@/components/HomeHero";
 import { Newsletter } from "@/components/Newsletter";
 import { ProductCard } from "@/components/ProductCard";
+import { contactInfo } from "@/lib/contact-info";
 import { fetchDummyJsonProducts } from "@/lib/dummyjson";
 import { getCategoryBySlug } from "@/lib/categories";
 
@@ -118,7 +119,14 @@ export default async function HomePage() {
           <div>
             <h3 className="font-medium text-slate-900">Support</h3>
             <p className="mt-1 text-sm text-slate-600">
-              Email support@ovestastore.com, use live chat, or the contact form
+              Email{" "}
+              <a
+                className="text-cyan-800 underline"
+                href={`mailto:${contactInfo.servicesEmail}`}
+              >
+                {contactInfo.servicesEmail}
+              </a>
+              , call {contactInfo.phone}, use live chat, or the contact form
               when you are signed in.
             </p>
           </div>

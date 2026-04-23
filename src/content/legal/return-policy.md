@@ -2,7 +2,7 @@
 
 Last updated: April 2026.
 
-Ovesta wants you to be happy with your purchase. This policy describes how **returns and refunds** work. Align timelines and restocking rules with your actual operations and inventory.
+**Ovesta Integrated Services Limited** wants you to be happy with your purchase through **ovestastore.com**. This policy describes how **returns and refunds** work. Align timelines and restocking rules with your actual operations and inventory.
 
 ## Eligibility
 
@@ -12,7 +12,7 @@ Ovesta wants you to be happy with your purchase. This policy describes how **ret
 ## How to start a return
 
 1. Sign in to your account and use order history, or  
-2. Email **support@ovestastore.com** with your order number and reason for return.
+2. Email **services@ovestastore.com** with your order number and reason for return.
 
 We will provide a **return authorization** and shipping instructions. Do not send items back without confirmation.
 
@@ -23,9 +23,12 @@ We will provide a **return authorization** and shipping instructions. Do not sen
 
 ## Damaged or wrong items
 
-Contact **support@ovestastore.com** right away with photos and your order number. We will work with you to replace the item or refund you.
+Contact **services@ovestastore.com** right away with photos and your order number. We will work with you to replace the item or refund you.
 
 ## Contact
 
-- **Email:** [support@ovestastore.com](mailto:support@ovestastore.com)  
-- **Store:** [https://ovestastore.com](https://ovestastore.com)
+- **Company:** Ovesta Integrated Services Limited  
+- **Email:** [services@ovestastore.com](mailto:services@ovestastore.com)  
+- **Phone:** [09088199082](tel:+2349088199082)  
+- **Store:** [https://ovestastore.com](https://ovestastore.com)  
+- **Address:** 3 Hassan Close, Benson, Ikorodu, Lagos, Nigeria  

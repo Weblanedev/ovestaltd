@@ -19,21 +19,43 @@ export default function ContactPage() {
     <main>
       <PageHeader
         title="Contact"
-        description="Reach the Ovesta team. We usually reply within one business day."
+        description="Reach Ovesta Integrated Services Limited. We usually reply within one business day."
         crumbs={[
           { href: "/", label: "Home" },
           { href: "/contact", label: "Contact" },
         ]}
       />
       <div className="mx-auto grid max-w-5xl gap-10 px-4 py-10 sm:grid-cols-2 sm:px-6">
-        <div>
-          <p className="text-slate-700">
-            <strong>Phone:</strong> {contactInfo.phone}
+        <div className="space-y-3 text-slate-700">
+          <p className="text-sm font-semibold text-slate-900">
+            {contactInfo.legalName}
           </p>
-          <p className="mt-2 text-slate-700">
-            <strong>Email:</strong> {contactInfo.supportEmail}
+          <p className="text-sm">{contactInfo.businessActivity}</p>
+          <p className="text-sm text-slate-600">{contactInfo.address}</p>
+          <p className="pt-2">
+            <strong>Phone:</strong>{" "}
+            <a
+              className="text-cyan-800 underline"
+              href={`tel:${contactInfo.phoneTel}`}
+            >
+              {contactInfo.phone}
+            </a>
           </p>
-          <p className="mt-4 text-sm text-slate-600">{contactInfo.address}</p>
+          <p>
+            <strong>Email:</strong>{" "}
+            <a
+              className="text-cyan-800 underline"
+              href={`mailto:${contactInfo.servicesEmail}`}
+            >
+              {contactInfo.servicesEmail}
+            </a>
+          </p>
+          <p className="text-sm text-slate-600">
+            Web:{" "}
+            <a className="text-cyan-800 underline" href={contactInfo.siteUrl}>
+              {contactInfo.domain}
+            </a>
+          </p>
         </div>
         <form
           onSubmit={handleSubmit(() => {

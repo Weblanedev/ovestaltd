@@ -14,9 +14,10 @@ export function Footer() {
           <div>
             <OvestaLogo className="inline-flex" />
             <p className="mt-3 text-sm text-slate-600">
-              A tech store for quality electronics and gear. Sign in for a
-              fast, secure checkout.
+              {contactInfo.businessActivity}. Sign in for a fast, secure
+              checkout.
             </p>
+            <p className="mt-2 text-xs text-slate-500">{contactInfo.legalName}</p>
           </div>
           <div>
             <h2 className="text-sm font-semibold uppercase tracking-wide text-slate-500">
@@ -99,15 +100,22 @@ export function Footer() {
               </li>
             </ul>
             <p className="mt-4 text-sm text-slate-600">
-              {contactInfo.phone}
+              <a className="hover:underline" href={`tel:${contactInfo.phoneTel}`}>
+                {contactInfo.phone}
+              </a>
               <br />
-              {contactInfo.supportEmail}
+              <a
+                className="hover:underline"
+                href={`mailto:${contactInfo.servicesEmail}`}
+              >
+                {contactInfo.servicesEmail}
+              </a>
             </p>
           </div>
         </div>
         <p className="mt-10 text-center text-xs text-slate-500">
-          © {new Date().getFullYear()} {contactInfo.siteName}. All rights
-          reserved.
+          © {new Date().getFullYear()} {contactInfo.legalName}. {contactInfo.siteName}{" "}
+          is operated by {contactInfo.legalName}.
         </p>
       </div>
     </footer>

@@ -2,7 +2,7 @@
 
 Last updated: April 2026.
 
-Ovesta (“we”, “us”, “our”) at **ovestastore.com** explains how we handle personal information. Update this with your legal counsel to match your operations.
+**Ovesta Integrated Services Limited** (“we”, “us”, “our”) operates **ovestastore.com** and explains how we handle personal information. Review this with your legal counsel to match your operations.
 
 ## What we collect
 
@@ -20,12 +20,16 @@ We work with vetted service providers (for example, hosting, payment processing,
 
 ## Your choices
 
-You may update account details where the site allows, contact us about access or correction, or ask questions about this policy at **support@ovestastore.com**.
+You may update account details where the site allows, contact us about access or correction, or ask questions about this policy at **services@ovestastore.com**.
 
 ## Contact
 
-- **Email:** [support@ovestastore.com](mailto:support@ovestastore.com)  
-- **Web:** [https://ovestastore.com](https://ovestastore.com) and the **Contact** page
+- **Company:** Ovesta Integrated Services Limited  
+- **Business:** Sales of Computers/Softwares  
+- **Address:** 3 Hassan Close, Benson, Ikorodu, Lagos, Nigeria  
+- **Phone:** [09088199082](tel:+2349088199082)  
+- **Email:** [services@ovestastore.com](mailto:services@ovestastore.com)  
+- **Web:** [https://ovestastore.com](https://ovestastore.com) and the **Contact** page  
 
 ## Changes
 

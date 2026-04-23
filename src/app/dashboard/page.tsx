@@ -51,7 +51,11 @@ export default function DashboardPage() {
             Live chat
           </h2>
           <p className="mt-2 text-sm text-slate-600">
-            Call {contactInfo.phone}, visit{" "}
+            Call{" "}
+            <a className="text-cyan-800 underline" href={`tel:${contactInfo.phoneTel}`}>
+              {contactInfo.phone}
+            </a>
+            , visit{" "}
             <Link className="text-cyan-800 underline" href="/contact">
               Contact
             </Link>
